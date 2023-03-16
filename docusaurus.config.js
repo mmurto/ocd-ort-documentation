@@ -66,12 +66,12 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'getting-started',
+            docId: 'README',
             position: 'left',
             label: 'Docs',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/mmurto/ocd-ort-documentation',
             label: 'GitHub',
             position: 'right',
           },
@@ -85,7 +85,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/docs/getting-started',
+                to: '/docs/README',
               },
             ],
           },
@@ -111,7 +111,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/mmurto/ocd-ort-documentation',
               },
             ],
           },
