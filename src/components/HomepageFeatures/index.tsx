@@ -4,51 +4,101 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  imgSrc: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Analyzert',
+    imgSrc: 'img/analyzer.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Determines the dependencies of projects and their metadata, abstracting
+        which package managers or build systems are actually being used.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Downloader',
+    imgSrc: 'img/downloader.png',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Fetches all source code of the projects and their dependencies,
+        abstracting which Version Control System (VCS) or other means are used
+        to retrieve the source code.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Scanner',
+    imgSrc: 'img/scanner.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Uses configured source code scanners to detect license / copyright
+        findings, abstracting the type of scanner.
+      </>
+    ),
+  },
+  {
+    title: 'Advisor',
+    imgSrc: 'img/advisor.png',
+    description: (
+      <>
+        Retrieves security advisories for used dependencies from configured
+        vulnerability data services.
+      </>
+    ),
+  },
+  {
+    title: 'Evaluator',
+    imgSrc: 'img/evaluator.png',
+    description: (
+      <>
+        Evaluates custom policy rules along with custom license classifications
+        against the data gathered in preceding stages and returns a list of
+        policy violations, e.g. to flag license findings.
+      </>
+    ),
+  },
+  {
+    title: 'Reporter',
+    imgSrc: 'img/reporter.png',
+    description: (
+      <>
+        Presents results in various formats such as visual reports, Open Source
+        notices or Bill-Of-Materials (BOMs) to easily identify dependencies,
+        licenses, copyrights or policy rule violations.
+      </>
+    ),
+  },
+  {
+    title: 'Notifier',
+    imgSrc: 'img/reporter.png',
+    description: (
+      <>
+        Sends result notifications via different channels (like{' '}
+        <a href="./examples/notifications/src/main/resources/example.notifications.kts">
+          emails
+        </a>{' '}
+        and / or JIRA tickets).
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, imgSrc, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img
+          className={styles.featureSvg}
+          role="img"
+          src={imgSrc}
+          alt={title}
+        />
       </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </div>
