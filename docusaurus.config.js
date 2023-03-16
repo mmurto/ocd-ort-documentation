@@ -60,7 +60,7 @@ const config = {
       navbar: {
         title: 'OSS Review Toolkit',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'OSS Review Toolkit Logo',
           src: 'img/logo.png',
         },
         items: [
@@ -93,16 +93,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Slack',
+                href: 'https://join.slack.com/t/ort-talk/shared_invite/zt-1c7yi4sj6-mk7R1fAa6ZdW5MQ6DfAVRg',
               },
             ],
           },
