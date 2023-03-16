@@ -71,7 +71,7 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://github.com/mmurto/ocd-ort-documentation',
+            href: 'https://github.com/oss-review-toolkit/ort',
             label: 'GitHub',
             position: 'right',
           },
@@ -103,7 +103,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/mmurto/ocd-ort-documentation',
+                href: 'https://github.com/oss-review-toolkit/ort',
               },
             ],
           },
